@@ -1,0 +1,40 @@
+- name: get list of user public keys
+  include_vars:
+    file: user_public_keys.yml
+
+- name: Make sure Vagrant Insecure Public key is removed
+  ansible.posix.authorized_key:
+    user: vagrant
+    state: absent
+    key: https://raw.githubusercontent.com/hashicorp/vagrant/main/keys/vagrant.pub
+
+- name: Install User public keys
+  ansible.posix.authorized_key:
+    user: "{{ ssh_user }}"
+    state: present
+    key: "{{ item }}"
+  loop: "{{ ssh_public_key_list }}"
+
+- name: Disable empty password login
+  lineinfile: 
+    dest: "{{ sshd_config }}" 
+    regexp: '^#?PermitEmptyPasswords' 
+    line: 'PermitEmptyPasswords no'
+
+- name: Disable remote root login
+  lineinfile: 
+    dest: "{{ sshd_config }}" 
+    regexp: '^#?PermitRootLogin' 
+    line: 'PermitRootLogin no'
+
+- name: Disable password login
+  lineinfile: 
+    dest: "{{ sshd_config }}" 
+    regexp: '^(#\s*)?PasswordAuthentication '
+    line: 'PasswordAuthentication no'
+
+- name: Enable PAM
+  lineinfile: 
+    dest: "{{ sshd_config }}" 
+    regexp: '^#?UsePAM' 
+    line: 'UsePAM yes'

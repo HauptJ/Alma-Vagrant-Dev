@@ -1,0 +1,10 @@
+- name: Install Workstation Group Package
+  dnf:
+    name: '@Workstation'
+    state: present
+  
+- name: Start Gnome on boot with Systemd
+  command: systemctl set-default graphical
+
+- name: 'Set Hyper V Resolution to 1080P'
+  command: grubby --update-kernel=ALL --args="video=hyperv_fb:1920x1080"

@@ -1,0 +1,20 @@
+---
+- name: Ensure Pip is installed.
+  package:
+    name: "{{ pip_package }}"
+    state: present
+
+- name: 
+  package:
+    name: "{{ pip_gcc_package }}"
+    state: present
+  when: pip_gcc_package
+
+- name: Ensure pip_install_packages are installed.
+  pip:
+    name: "{{ item.name | default(item) }}"
+    version: "{{ item.version | default(omit) }}"
+    virtualenv: "{{ item.virtualenv | default(omit) }}"
+    state: "{{ item.state | default(omit) }}"
+    executable: "{{ pip_executable }}"
+  loop: "{{ pip_install_packages }}"

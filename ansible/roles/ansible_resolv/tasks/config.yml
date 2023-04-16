@@ -1,0 +1,10 @@
+---
+
+- name: "setup resolv.conf"
+  template:
+    src: resolv.conf.j2
+    dest: "{{ resolv_file}}"
+    owner: root
+    group: root
+    mode: 0644
+    attr: +i

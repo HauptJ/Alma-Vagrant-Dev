@@ -1,0 +1,60 @@
+---
+- name: Gather package facts
+  package_facts:
+    manager: rpm
+
+- name: Detect missing VirtualBox Guest Additions dependencies
+  set_fact:
+    vbox_guest_missing_deps: "{{ vbox_guest_missing_deps | default([]) + [item] }}"
+  loop:
+    - elfutils-libelf-devel
+    - gcc
+    - kernel-devel
+    - kernel-headers
+    - make
+    - perl
+  when: item not in ansible_facts.packages|list
+
+- name: Install VirtualBox Guest Additions dependencies
+  dnf:
+    name: "{{ vbox_guest_missing_deps }}"
+    state: latest
+
+- name: Mount VBoxGuestAdditions.iso
+  mount:
+    path: /mnt
+    src: "{{ vbox_additions_iso_path }}"
+    fstype: iso9660
+    opts: loop
+    state: mounted
+
+- name: Install VirtualBox Guest Additions
+  command: /mnt/VBoxLinuxAdditions.run --nox11
+
+- name: Unmount VBoxGuestAdditions.iso
+  mount:
+    path: /mnt
+    src: "{{ vbox_additions_iso_path }}"
+    state: absent
+
+- name: Remove VBoxGuestAdditions.iso
+  file:
+    path: "{{ vbox_additions_iso_path }}"
+    state: absent
+
+- name: Remove VirtualBox Guest Additions dependencies
+  dnf:
+    name: "{{ vbox_guest_missing_deps }}"
+    state: absent
+
+- name: Find /var/log/vboxadd-* logs
+  find:
+    paths: /var/log
+    patterns: 'vboxadd-*'
+  register: vboxadd_logs
+
+- name: Delete /var/log/vboxadd-* logs
+  file:
+    path: "{{ item.path }}"
+    state: absent
+  with_items: "{{ vboxadd_logs.files }}"

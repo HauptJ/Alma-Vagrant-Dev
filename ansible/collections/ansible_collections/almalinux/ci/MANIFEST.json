@@ -1,0 +1,30 @@
+{
+ "collection_info": {
+  "namespace": "almalinux",
+  "name": "ci",
+  "version": "0.1.2",
+  "authors": [
+   "Eugene Zamriy <eugene@zamriy.info>"
+  ],
+  "readme": "README.md",
+  "tags": [
+   "almalinux"
+  ],
+  "description": "The AlmaLinux OS CI collection",
+  "license": [],
+  "license_file": "LICENSE",
+  "dependencies": {},
+  "repository": "https://github.com/AlmaLinux/ansible-almalinux.ci",
+  "documentation": null,
+  "homepage": "https://github.com/AlmaLinux/ansible-almalinux.ci",
+  "issues": "https://github.com/AlmaLinux/ansible-almalinux.ci/issues"
+ },
+ "file_manifest_file": {
+  "name": "FILES.json",
+  "ftype": "file",
+  "chksum_type": "sha256",
+  "chksum_sha256": "9cdd65deb50893c61b10e12cbb56cd02d542943e99e693d761d0bea3b4b96598",
+  "format": 1
+ },
+ "format": 1
+}

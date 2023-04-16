@@ -1,0 +1,30 @@
+---
+collections:
+  - name: ansible.posix
+    src: https://github.com/ansible-collections/ansible.posix.git
+  - name: almalinux.ci
+    src: https://github.com/AlmaLinux/ansible-almalinux.ci.git
+
+roles:
+  - name: geerlingguy.swap
+    src: https://github.com/geerlingguy/ansible-role-swap.git
+  - name: geerlingguy.pip
+    src: https://github.com/geerlingguy/ansible-role-pip.git
+  - name: geerlingguy.docker
+    src: https://github.com/geerlingguy/ansible-role-docker.git
+  - name: gantsign.minikube
+    src: https://github.com/gantsign/ansible_role_minikube.git
+  - name: gantsign.helm
+    src: https://github.com/gantsign/ansible_role_helm.git
+  - name: gantsign.antigen
+    src: https://github.com/gantsign/ansible_role_antigen.git
+  - name: githubixx.kubectl
+    src: https://github.com/githubixx/ansible-role-kubectl.git
+  - name: ansible_resolv
+    src: https://github.com/HauptJ/ansible_resolv.git
+  - name: ansible-role-golang
+    src: https://github.com/gantsign/ansible-role-golang.git
+  - name: ansible-pycharm
+    src: https://github.com/HauptJ/ansible-pycharm.git
+  #- name: geerlingguy.helm
+  #  src: https://github.com/geerlingguy/ansible-role-helm.git

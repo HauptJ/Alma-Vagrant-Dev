@@ -1,0 +1,5 @@
+editor_pkg_list:
+  - code
+  - vim
+  - emacs
+  - nano

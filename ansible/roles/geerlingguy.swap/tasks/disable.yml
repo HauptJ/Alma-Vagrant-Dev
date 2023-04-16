@@ -1,0 +1,16 @@
+---
+- name: Disable swap (if configured).
+  command: swapoff -a
+  when: ansible_swaptotal_mb > 0
+  # tags: ['skip_ansible_lint']
+
+- name: Disable swap
+  ansible.posix.mount:
+    name: swap
+    fstype: swap
+    state: absent
+
+- name: Ensure swap file doesn't exist (if configured).
+  file:
+    path: "{{ swap_file_path }}"
+    state: absent

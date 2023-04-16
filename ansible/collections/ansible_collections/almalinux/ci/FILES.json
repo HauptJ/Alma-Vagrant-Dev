@@ -1,0 +1,313 @@
+{
+ "files": [
+  {
+   "name": ".",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "LICENSE",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+   "format": 1
+  },
+  {
+   "name": "README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "910eb11a8951bd00b8ec63bb4535a96d376bbf04fde8037ae040fa58915f3688",
+   "format": 1
+  },
+  {
+   "name": "roles",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/disable_firstboot",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/disable_firstboot/requirements.test.txt",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3388d2af1bf4c366e389e90782dc7d89a5525fc77306f90844bae9855b023337",
+   "format": 1
+  },
+  {
+   "name": "roles/disable_firstboot/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1e372fc191e5a146a9cdd8a9c136d1457214864f1893310c92df200214756079",
+   "format": 1
+  },
+  {
+   "name": "roles/disable_firstboot/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/disable_firstboot/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "dc27ae0b7e7659746099783f11ae57eda2ec346d7eddf3c8e4eb62260ef1d45e",
+   "format": 1
+  },
+  {
+   "name": "roles/disable_firstboot/molecule",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/disable_firstboot/molecule/default",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/disable_firstboot/molecule/default/tests",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/disable_firstboot/molecule/default/tests/test_opennebula_guest.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3ad29c5470bd8dc30406928e164b9e6cb07c482c73d7fde297b4b9e0df2569f8",
+   "format": 1
+  },
+  {
+   "name": "roles/disable_firstboot/molecule/default/converge.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "36a2751e74c5b41f210cfbe36870c6b13050ee8616f9abfe734d58ff26ee52e8",
+   "format": 1
+  },
+  {
+   "name": "roles/disable_firstboot/molecule/default/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a11b9688a631c22af5ae83fca996e5728825bc32d8de5e5c7de14dc67149d30a",
+   "format": 1
+  },
+  {
+   "name": "roles/disable_firstboot/molecule/default/prepare.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8c86d54c0a4860a6541db5f7cfa745a2dcac4b8ccc1a255400fc15e72b8fc020",
+   "format": 1
+  },
+  {
+   "name": "roles/disable_firstboot/molecule/firstboot_enabled",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/disable_firstboot/molecule/firstboot_enabled/tests",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/disable_firstboot/molecule/firstboot_enabled/converge.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "36a2751e74c5b41f210cfbe36870c6b13050ee8616f9abfe734d58ff26ee52e8",
+   "format": 1
+  },
+  {
+   "name": "roles/disable_firstboot/molecule/firstboot_enabled/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5ab558fd9583d91c802708d885f2c7b56842f64fbeae3ecccde07fb10da9f1eb",
+   "format": 1
+  },
+  {
+   "name": "roles/disable_firstboot/molecule/firstboot_enabled/prepare.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6ea498f8a867ae6c0c62fe03681df7d14153aae0095ef012452351fad1bae43c",
+   "format": 1
+  },
+  {
+   "name": "roles/opennebula_guest",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/opennebula_guest/requirements.test.txt",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3388d2af1bf4c366e389e90782dc7d89a5525fc77306f90844bae9855b023337",
+   "format": 1
+  },
+  {
+   "name": "roles/opennebula_guest/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/opennebula_guest/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "973b50fe18f666ce49a0668677b7ee739712a57841311c002c7d5d92356ade54",
+   "format": 1
+  },
+  {
+   "name": "roles/opennebula_guest/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ec61f6152f0f995be32cea84aee95c7d747e111171f3c24ecee1f73e371bbab1",
+   "format": 1
+  },
+  {
+   "name": "roles/opennebula_guest/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/opennebula_guest/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "16cb11e60ca04a02406706a2cbeb8266c9134bb3dcf01a1fc28ba1b3011a0e49",
+   "format": 1
+  },
+  {
+   "name": "roles/opennebula_guest/molecule",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/opennebula_guest/molecule/default",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/opennebula_guest/molecule/default/tests",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/opennebula_guest/molecule/default/tests/test_opennebula_guest.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b06190f7cf05a84309872e48b9ce11961430cfb7cbb93d424ac2d2897375d029",
+   "format": 1
+  },
+  {
+   "name": "roles/opennebula_guest/molecule/default/converge.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "36a2751e74c5b41f210cfbe36870c6b13050ee8616f9abfe734d58ff26ee52e8",
+   "format": 1
+  },
+  {
+   "name": "roles/opennebula_guest/molecule/default/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f65b49642f0a23a0063763b4abe292009fc4f4d133ee9bbcaacb0aa19e5adfd4",
+   "format": 1
+  },
+  {
+   "name": "roles/opennebula_guest/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/opennebula_guest/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "713998790734b5972ec62b50d5093b93689ff151b2e93365308b23716450fa52",
+   "format": 1
+  },
+  {
+   "name": "roles/upgrade_and_reboot",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/upgrade_and_reboot/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/upgrade_and_reboot/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5c54bf9e66f24896c450dd28f87b70e66866604c10627c23809776d8a9346c2b",
+   "format": 1
+  },
+  {
+   "name": "roles/upgrade_and_reboot/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a6917d01783c9d3b6bdfe1803465748eedf65c3de3894d2c0b39c0480c6f1c67",
+   "format": 1
+  },
+  {
+   "name": "roles/upgrade_and_reboot/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/upgrade_and_reboot/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c3ec8b6694c52f48cb2bdf645ee6cbe153ad6c2ff571df593c843b8f5ee21abd",
+   "format": 1
+  },
+  {
+   "name": "roles/upgrade_and_reboot/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/upgrade_and_reboot/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6c8ef0c74b3e923c6b292f1c3678d803dfe8520029d1226180743b3a125a87d9",
+   "format": 1
+  }
+ ],
+ "format": 1
+}

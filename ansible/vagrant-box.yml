@@ -1,0 +1,53 @@
+# An Ansible playbook that configures a Vagrant box
+---
+- name: 'AlmaLinux Vagrant Box'
+  hosts: default
+  become: true
+  
+  vars:
+    secure_ssh: true
+    swap_file_state: 'absent'
+    display_res: '2560x1440'
+    resolv_search: [lan]
+    resolv_nameserver:
+    - 8.8.8.8
+    - 8.8.4.4
+    docker_users:
+    - vagrant
+    pycharm_version: 2021.3.3
+    pycharm_edition: professional
+
+  collections:
+    - ansible.posix
+    - almalinux.ci
+
+  roles:
+    - role: geerlingguy.swap
+    - role: ansible_resolv
+    - role: upgrade_and_reboot
+    - role: hyperv_guest
+    - role: nfs-client
+    - role: ansible-role-golang
+    - role: geerlingguy.pip
+    - role: geerlingguy.docker
+    - role: gantsign.minikube
+    - role: githubixx.kubectl
+    - role: gantsign.helm
+    - role: gui
+    - role: editors
+    - role: ansible-pycharm
+    - role: gantsign.antigen
+      users:
+        - username: vagrant
+          antigen_libraries:
+            - name: oh-my-zsh
+          antigen_bundles:
+            # Oh My Zsh Helm plugin
+            - name: helm
+    - role: install_vagrant_key
+      when: secure_ssh == false
+    - role: secure_ssh
+      when: secure_ssh == true
+    # - role: geerlingguy.helm
+    # - role: cleanup_vm
+    #  cleanup_ssh_host_keys: false

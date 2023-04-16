@@ -6,3 +6,6 @@ crash.log
 
 # For built boxes
 *.box
+
+# Authorized SSH Public Keys
+user_public_keys.yml
